@@ -1,0 +1,19 @@
+<h1>All Users Information</h1>
+
+<% @users.each do |user|%>
+
+	<h2><%= link_to user.name, user %></h2>
+	Age: <%= user.age %> <br>
+	Email: <%= user.email %><br>
+<br>
+	<p>
+		<%= link_to "Edit", edit_user_path(user) %>
+	</p>
+	<p>
+		<%= link_to "Delete User", user_path(user), method: :delete, data: { confirm: "Are you sure?" } %>
+	</p>
+<% end %>
+
+<p>
+	<%= link_to "Add a new user", new_user_path %>
+</p>
