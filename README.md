@@ -1,1 +1,1 @@
-# rails
+# rails - git demonstration
